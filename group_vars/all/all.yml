@@ -1,0 +1,12 @@
+---
+# This file is parsed both by Ansible and the Application.
+# All system configuration variables should be located here.
+
+
+
+#whether to install elastic search
+install_elasticsearch: true
+elasticsearch_network_host:  0.0.0.0 
+elasticsearch_http_port: 9200
+elasticsearch_base_index: analytictestui01
+

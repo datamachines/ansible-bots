@@ -1,0 +1,7 @@
+---
+# This playbook deploys a simple elastic search server. 
+
+- hosts: elasticsearch-servers 
+ 
+  roles:
+    - elasticsearch

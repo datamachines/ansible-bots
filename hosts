@@ -1,0 +1,14 @@
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+#uncomment if run locally
+#localhost ansible_connection=local
+
+[elasticsearch-servers]
+es-server1
+
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+
+
