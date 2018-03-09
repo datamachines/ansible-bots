@@ -31,7 +31,7 @@ To mount the nfs partition as client.
 mount -t nfs $nfs-server:/$nfs_export_filesystem $local_mount_point
 
 
-### all roles
+### All roles
 To use them, first edit the "hosts" inventory file to contain the
 hostnames of the machines on each role, and edit the
 group_vars/$role/var.yml file to set all variables.
