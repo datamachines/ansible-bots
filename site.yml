@@ -1,13 +1,5 @@
 ---
-# This playbook deploys a simple elastic search server. 
-
-#- hosts: elasticsearch-servers 
- 
-#  roles:
-#    - elasticsearch
-
-- hosts: nfs-servers 
- 
-  roles:
-    - nfsserver
-
+# file: site.yml
+# to install  ansible-playbook -i hosts   -v   site.yml
+- import_playbook: es.yml
+- import_playbook: nfsserver.yml

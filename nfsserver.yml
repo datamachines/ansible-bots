@@ -1,0 +1,9 @@
+---
+# This playbook deploys a simple nfs server. 
+
+
+- hosts: nfs-servers 
+ 
+  roles:
+    - nfsserver
+
