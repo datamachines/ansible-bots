@@ -7,8 +7,8 @@ These playbooks deploy a very basic implementation of server roles.
 
 ### Elastic Search Server. 
 To use them, first edit the "hosts" inventory file to contain the
-hostnames of the machines on which you want elasticsearch deployed, and edit the 
-group_vars/all/all.yml file to set any elastic search configuration parameters you need.
+hostnames of the machines on which you want elasticsearch deployed under section [elasticsearch-servers], and edit the 
+group_vars/all/vars.yml file to set any elastic search configuration parameters you need.
 
 Then run the playbook, like this:
 
