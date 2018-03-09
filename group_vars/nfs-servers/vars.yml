@@ -1,0 +1,14 @@
+
+nfsserver_options: 'rw,sync,no_root_squash,no_subtree_check'
+# client network that allow to mount nfs server in form of network/subnet
+AllowClientNetwork: 10.0.0.1/24
+
+#the drive in nfs server you want to export
+mountable_share_drive: /dev/vdc
+nfs_export_filesystem: "/share"
+nfs_export_filestype: "ext4"
+nfs_options: "(rw,sync,no_root_squash,no_subtree_check)"
+#
+
+
+

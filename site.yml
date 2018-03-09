@@ -1,7 +1,13 @@
 ---
 # This playbook deploys a simple elastic search server. 
 
-- hosts: elasticsearch-servers 
+#- hosts: elasticsearch-servers 
+ 
+#  roles:
+#    - elasticsearch
+
+- hosts: nfs-servers 
  
   roles:
-    - elasticsearch
+    - nfsserver
+

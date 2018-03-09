@@ -1,0 +1,24 @@
+---  
+
+- name: Ensure NFS utilities are installed.
+  apt: name={{ item }} state=installed update_cache=yes
+  with_items:
+    - nfs-common
+    - nfs-kernel-server
+    
+- name: Create mountable export dir
+  file: path={{ nfs_export_filesystem }} state=directory mode=777 owner=root group=root
+
+- name: make sure the mount drive has a filesystem
+  filesystem: fstype={{ nfs_export_filestype }} dev={{ mountable_share_drive }}
+
+- name: set mountpoints
+  mount: name={{ nfs_export_filesystem }} src={{ mountable_share_drive }} fstype={{ nfs_export_filestype }} opts=defaults dump=0 passno=2 state=mounted
+
+
+
+- name: copy /etc/exports
+  template: src=templates/exports.j2 dest=/etc/exports owner=root group=root
+
+- name: restart nfs server
+  service: name=nfs-kernel-server state=restarted

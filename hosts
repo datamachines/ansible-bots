@@ -4,8 +4,10 @@
 #localhost ansible_connection=local
 
 [elasticsearch-servers]
-es-server1
+10.108.16.115
 
+[nfs-servers]
+10.108.16.115
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
